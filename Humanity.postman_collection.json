@@ -1,0 +1,495 @@
+{
+	"info": {
+		"_postman_id": "11f4e48a-db8f-4fa6-95b3-787e4bba0dce",
+		"name": "Humanity",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Wrong Login (TC2)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "060b0839-6ef4-412f-be65-c82f8fc0bbee",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Content-Type is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});",
+							"pm.test(\"Body matches string incorrect-login\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"incorrect-login\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "test771.humanity.com"
+					},
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "x-newrelic-id",
+						"value": "VgYOVVFRDhAIUVZVBwYCVQ=="
+					},
+					{
+						"key": "origin",
+						"value": "https://test771.humanity.com"
+					},
+					{
+						"key": "x-requested-with",
+						"value": "XMLHttpRequest"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36"
+					},
+					{
+						"key": "content-type",
+						"value": "application/x-www-form-urlencoded; charset=UTF-8"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "referer",
+						"value": "https://test771.humanity.com/app/"
+					},
+					{
+						"key": "accept-encoding",
+						"value": "gzip, deflate, br"
+					},
+					{
+						"key": "accept-language",
+						"value": "en-US,en;q=0.9"
+					},
+					{
+						"key": "cookie",
+						"value": "__adroll_fpc=5cb1c9bf8cda1ddece0ae0c5e0a1ba23-s2-1574540602167; intercom-id-vakp3efi=9602c93d-d6bd-47de-bba6-fb246b33ff80; _fbp=fb.1.1574540608028.65032901; _ga=GA1.2.290477932.1574540683; _gid=GA1.2.1358202809.1574540683; ajs_user_id=null; ajs_group_id=null; ajs_anonymous_id=%2282c81e52-b55b-4a21-84fa-c7cb0d21bc4e%22; _vwo_uuid_v2=DCFDE2D1D67240FD854973677D06EE1F0|abd9f2e121d046cd1a74e8feb5a2bf2e; spc_2012_=MXwyMWIwNmI4Y3wxNTc1NzUxMTU4fDE5YTAyZjJlfDU2Y2JmYjE5; PHPSESSID=4meodgt5grttk02ms9kbm486ve; __ar_v4=ZGISW36B45CEFOPZMHFIKS%3A20191123%3A4%7CCHMCQ63EFFDO7C4XSDJLTD%3A20191123%3A4%7CBAIQMSLQJ5A2HKE7B372UG%3A20191123%3A4; intercom-session-vakp3efi=WUZFand5ZWZvUUVtckhEc3hLZ0ZwUll1Q1ZpcmM5cG9RTU9vODBJMjhXSkZScnJmMFpoSVh3TTh5Y2Z6UkZpUS0tVGhsd2czbE16V1F0NjBCU3plOXd6Zz09--25b283070d20d393be131ff6815b648c0a45fae3"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "Action=LoginUser&email=cvetaue%40gmail.com&password=Galaxymini2123"
+				},
+				"url": {
+					"raw": "https://test771.humanity.com/process/sales.php",
+					"protocol": "https",
+					"host": [
+						"test771",
+						"humanity",
+						"com"
+					],
+					"path": [
+						"process",
+						"sales.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RIght Login (TC1)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "738152c2-5331-4a3e-9ab6-150311fa1ba4",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Content-Type is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});",
+							"",
+							"pm.test(\"Body matches string Login Success\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Login Success.\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "test771.humanity.com"
+					},
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "x-newrelic-id",
+						"value": "VgYOVVFRDhAIUVZVBwYCVQ=="
+					},
+					{
+						"key": "origin",
+						"value": "https://test771.humanity.com"
+					},
+					{
+						"key": "x-requested-with",
+						"value": "XMLHttpRequest"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36"
+					},
+					{
+						"key": "content-type",
+						"value": "application/x-www-form-urlencoded; charset=UTF-8"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "referer",
+						"value": "https://test771.humanity.com/app/"
+					},
+					{
+						"key": "accept-encoding",
+						"value": "gzip, deflate, br"
+					},
+					{
+						"key": "accept-language",
+						"value": "en-US,en;q=0.9"
+					},
+					{
+						"key": "cookie",
+						"value": "__adroll_fpc=5cb1c9bf8cda1ddece0ae0c5e0a1ba23-s2-1574540602167; intercom-id-vakp3efi=9602c93d-d6bd-47de-bba6-fb246b33ff80; _fbp=fb.1.1574540608028.65032901; _ga=GA1.2.290477932.1574540683; _gid=GA1.2.1358202809.1574540683; ajs_user_id=null; ajs_group_id=null; ajs_anonymous_id=%2282c81e52-b55b-4a21-84fa-c7cb0d21bc4e%22; _vwo_uuid_v2=DCFDE2D1D67240FD854973677D06EE1F0|abd9f2e121d046cd1a74e8feb5a2bf2e; spc_2012_=MXwyMWIwNmI4Y3wxNTc1NzUxMTU4fDE5YTAyZjJlfDU2Y2JmYjE5; PHPSESSID=4meodgt5grttk02ms9kbm486ve; __ar_v4=ZGISW36B45CEFOPZMHFIKS%3A20191123%3A4%7CCHMCQ63EFFDO7C4XSDJLTD%3A20191123%3A4%7CBAIQMSLQJ5A2HKE7B372UG%3A20191123%3A4; intercom-session-vakp3efi=WUZFand5ZWZvUUVtckhEc3hLZ0ZwUll1Q1ZpcmM5cG9RTU9vODBJMjhXSkZScnJmMFpoSVh3TTh5Y2Z6UkZpUS0tVGhsd2czbE16V1F0NjBCU3plOXd6Zz09--25b283070d20d393be131ff6815b648c0a45fae3"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "Action=LoginUser&email=cvetaue%40gmail.com&password=Galaxymini2"
+				},
+				"url": {
+					"raw": "https://test771.humanity.com/process/sales.php",
+					"protocol": "https",
+					"host": [
+						"test771",
+						"humanity",
+						"com"
+					],
+					"path": [
+						"process",
+						"sales.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Employee (TC17)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cbd6e1e4-39e8-4b2f-92e4-b698c5656597",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "test771.humanity.com"
+					},
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "x-newrelic-id",
+						"value": "VgYOVVFRDhAIUVZVBwYCVQ=="
+					},
+					{
+						"key": "origin",
+						"value": "https://test771.humanity.com"
+					},
+					{
+						"key": "x-requested-with",
+						"value": "XMLHttpRequest"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "referer",
+						"value": "https://test771.humanity.com/app/staff/add/"
+					},
+					{
+						"key": "accept-encoding",
+						"value": "gzip, deflate, br"
+					},
+					{
+						"key": "accept-language",
+						"value": "en-US,en;q=0.9"
+					},
+					{
+						"key": "set-cookie",
+						"value": "ajs_group_id=null; ajs_anonymous_id=%227d15f391-f93e-4577-a8df-2d1446ce74bf%22; _ga=GA1.2.513501138.1574017800; cb_user_id=null; cb_group_id=null; cb_anonymous_id=%22937bf202-3057-41d3-91ca-93c7fff65f5d%22; _fbp=fb.1.1574017799823.483484215; intercom-id-vakp3efi=60886706-1e30-4e77-8d9f-0452dae46be3; hubspotutk=b98dd13ec0a80fb58eae0f1faabe1d6c; __hssrc=1; __hstc=115762969.b98dd13ec0a80fb58eae0f1faabe1d6c.1574017888841.1574017888841.1574424821532.2; _vwo_uuid_v2=DC7C411982968EE3D6C865C83829033AD|495239f5990e7a75da589d3f3e1b37a1; ajs_user_id=%225234655%22; __insp_wid=1815345295; __insp_nv=true; __insp_targlpu=aHR0cHM6Ly90ZXN0NzcxLmh1bWFuaXR5LmNvbS9hcHAvZGFzaGJvYXJkLw%3D%3D; __insp_targlpt=RGFzaGJvYXJkIC0gRGFzaGJvYXJkIC0gSHVtYW5pdHk%3D; __insp_norec_sess=true; __insp_slim=1574455095981; _gid=GA1.2.2123691934.1574632519; cvetauegmailcoman_reload=1574754915; PHPSESSID=3v5mc56q87i4fbhgbcr0ea7sq8; csrfToken=724ae58fd1b525ec3a36197ff3262451; intercom-session-vakp3efi=UzVuOHYvTmtUanlIMmJVWGdwWWRaT3I1b0FlendQTDNISUpCcTJCR3did2ZaK2xaYmdXZTc1WG5NZW9jcHJuVi0tVnFpTkp5SHlDYjRBaHd5VkxleGpUZz09--d9ecf8a446b124b3004d61f0acbe7fe1e5561cb1; _gat_SP_Product_Live_GA_Tracker=1; spc_2012_=NTIzNDY1NXxkMmY5ZDQ3ZDQ0YzZjOTE1OTRjODBmYjM0ZGFlMDAxMjBkZjE0ZGM1fDE1NzU5MjUwMDN8Nzc2OGNiMDA0ZGVjODE1ODRmN2NlYzFjNTBmMWQ2YjYxNzg0MmJlM3wxMmQ0NTg0Zjg0YTJmMWFmZTgzNGY5ZTJhMTJiY2M2OTU2NzFkMzVk; SPAUTOLOGOUT=1574719004791"
+					},
+					{
+						"key": "PHPSESSID",
+						"value": "70c6qas3lp0qnhkusatioabig5",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "add_employees%5B0%5D%5Bfname%5D=1&add_employees%5B0%5D%5Blname%5D=&add_employees%5B0%5D%5Bemail%5D=&csrfToken=724ae58fd1b525ec3a36197ff3262451",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://test771.humanity.com/app/staff/process.php",
+					"protocol": "https",
+					"host": [
+						"test771",
+						"humanity",
+						"com"
+					],
+					"path": [
+						"app",
+						"staff",
+						"process.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RIght Login Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "738152c2-5331-4a3e-9ab6-150311fa1ba4",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Content-Type is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});",
+							"",
+							"pm.test(\"Body matches string Login Success\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Login Success.\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "test771.humanity.com"
+					},
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "x-newrelic-id",
+						"value": "VgYOVVFRDhAIUVZVBwYCVQ=="
+					},
+					{
+						"key": "origin",
+						"value": "https://test771.humanity.com"
+					},
+					{
+						"key": "x-requested-with",
+						"value": "XMLHttpRequest"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36"
+					},
+					{
+						"key": "content-type",
+						"value": "application/x-www-form-urlencoded; charset=UTF-8"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "referer",
+						"value": "https://test771.humanity.com/app/"
+					},
+					{
+						"key": "accept-encoding",
+						"value": "gzip, deflate, br"
+					},
+					{
+						"key": "accept-language",
+						"value": "en-US,en;q=0.9"
+					},
+					{
+						"key": "cookie",
+						"value": "__adroll_fpc=5cb1c9bf8cda1ddece0ae0c5e0a1ba23-s2-1574540602167; intercom-id-vakp3efi=9602c93d-d6bd-47de-bba6-fb246b33ff80; _fbp=fb.1.1574540608028.65032901; _ga=GA1.2.290477932.1574540683; _gid=GA1.2.1358202809.1574540683; ajs_user_id=null; ajs_group_id=null; ajs_anonymous_id=%2282c81e52-b55b-4a21-84fa-c7cb0d21bc4e%22; _vwo_uuid_v2=DCFDE2D1D67240FD854973677D06EE1F0|abd9f2e121d046cd1a74e8feb5a2bf2e; spc_2012_=MXwyMWIwNmI4Y3wxNTc1NzUxMTU4fDE5YTAyZjJlfDU2Y2JmYjE5; PHPSESSID=4meodgt5grttk02ms9kbm486ve; __ar_v4=ZGISW36B45CEFOPZMHFIKS%3A20191123%3A4%7CCHMCQ63EFFDO7C4XSDJLTD%3A20191123%3A4%7CBAIQMSLQJ5A2HKE7B372UG%3A20191123%3A4; intercom-session-vakp3efi=WUZFand5ZWZvUUVtckhEc3hLZ0ZwUll1Q1ZpcmM5cG9RTU9vODBJMjhXSkZScnJmMFpoSVh3TTh5Y2Z6UkZpUS0tVGhsd2czbE16V1F0NjBCU3plOXd6Zz09--25b283070d20d393be131ff6815b648c0a45fae3"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "Action=LoginUser&email=cvetaue%40gmail.com&password=Galaxymini2"
+				},
+				"url": {
+					"raw": "https://test771.humanity.com/process/sales.php",
+					"protocol": "https",
+					"host": [
+						"test771",
+						"humanity",
+						"com"
+					],
+					"path": [
+						"process",
+						"sales.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add employee with same email (TC23)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "143bcf77-c3db-45df-8187-b6f4ee2983bc",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"email_taken\");",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "set-Cookie",
+						"value": "ajs_group_id=null; ajs_anonymous_id=%227d15f391-f93e-4577-a8df-2d1446ce74bf%22; _ga=GA1.2.513501138.1574017800; cb_user_id=null; cb_group_id=null; cb_anonymous_id=%22937bf202-3057-41d3-91ca-93c7fff65f5d%22; _fbp=fb.1.1574017799823.483484215; intercom-id-vakp3efi=60886706-1e30-4e77-8d9f-0452dae46be3; hubspotutk=b98dd13ec0a80fb58eae0f1faabe1d6c; __hssrc=1; __hstc=115762969.b98dd13ec0a80fb58eae0f1faabe1d6c.1574017888841.1574017888841.1574424821532.2; _vwo_uuid_v2=DC7C411982968EE3D6C865C83829033AD|495239f5990e7a75da589d3f3e1b37a1; ajs_user_id=%225234655%22; __insp_wid=1815345295; __insp_nv=true; __insp_targlpu=aHR0cHM6Ly90ZXN0NzcxLmh1bWFuaXR5LmNvbS9hcHAvZGFzaGJvYXJkLw%3D%3D; __insp_targlpt=RGFzaGJvYXJkIC0gRGFzaGJvYXJkIC0gSHVtYW5pdHk%3D; __insp_norec_sess=true; __insp_slim=1574455095981; _gid=GA1.2.2123691934.1574632519; cvetauegmailcoman_reload=1574754915; PHPSESSID=4ucr7pie1qm9u1tf18sv879dge; csrfToken=c755a0537532722a5d8191266b3ee2ae; intercom-session-vakp3efi=V0RMRTVlNENDSW9ibXJDeGdjWUdHVUNYZTFWSXdqeEpwa3Q5Tlo4TFFuQW9KY2tFUlZLdnJ4VlFFMld6TzdKbi0tVjRpWTJTUkZwTHV4dS9yTkpvOXdQQT09--50308c029a0e9c4b2e926444fd8c499970342722; spc_2012_=NTIzNDY1NXxkMmY5ZDQ3ZDQ0YzZjOTE1OTRjODBmYjM0ZGFlMDAxMjBkZjE0ZGM1fDE1NzU5Mjc1Njh8OWYyYTgxYWNhMjc5MjE5MTU1ZTZlODlkMDQ2OGIwYzFhMWVlOGMzOXw4YWJmYjJiYjJhZmRjNmJjZmQ2ZDgxZWVlOTU1ZmE1MGYxYjI3Nzk5; SPAUTOLOGOUT=1574721574100",
+						"type": "text"
+					},
+					{
+						"key": "Origin",
+						"value": "https://test771.humanity.com",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "https://test771.humanity.com/app/staff/add/",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded; charset=UTF-8",
+						"type": "text"
+					},
+					{
+						"key": "accept-encoding",
+						"value": "gzip, deflate, br",
+						"type": "text"
+					},
+					{
+						"key": "accept-language",
+						"value": "sr-RS,sr;q=0.9,en-US;q=0.8,en;q=0.7",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "add_employees%5B0%5D%5Bfname%5D=2&add_employees%5B0%5D%5Blname%5D=eee&add_employees%5B0%5D%5Bemail%5D=cvetaue%40gmail.com&csrfToken=c755a0537532722a5d8191266b3ee2ae\r\n",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://test771.humanity.com/app/staff/process.php",
+					"protocol": "https",
+					"host": [
+						"test771",
+						"humanity",
+						"com"
+					],
+					"path": [
+						"app",
+						"staff",
+						"process.php"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
